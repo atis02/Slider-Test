@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* @import "swiper/swiper-bundle.css";
+@import "swiper/css/navigation"; */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #fafafa;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.swiper-container {
+  position: relative !important;
+  height: 60vh;
+  width: 100%;
+  z-index: 1;
+}
+
+.swiper-pagination {
+  position: absolute !important;
+  top: -20px !important;
+  left: 20% !important;
+  transform: translateX(-50%) !important;
+  z-index: 10000 !important;
+  margin-top: 10px !important;
+  padding-bottom: 20 !important;
+  pointer-events: none;
+}
+
+.swiper-pagination-bullet {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 100px !important;
+  background-color: gray !important;
+  pointer-events: auto;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #000 !important;
+  width: 30px !important;
+  transition: all ease-in 0.5s;
+}
+
+@media (min-width: 1024px) {
+  /* Adjust breakpoint if needed */
+  .swiper-pagination {
+    display: none !important;
+  }
+}
